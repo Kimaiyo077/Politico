@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.2 em;
+    background-color: #c5e2f6;   
+}
+
+h1, h2, h3{
+    margin: 0;
+    padding: 1 em 0;
+}
+
+.btn{
+    text-decoration: none;
+    border: 1px black solid;
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    color: black;
+    display: inline-block;
+}
+
+.btn:hover{
+    border-radius: 25%;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+p{
+    margin: 0;
+    padding: 1em 0;
+}
+
