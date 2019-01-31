@@ -20,7 +20,7 @@ form input{
     margin: 1em;
     padding: 1em;
     border-radius: 2px;
-    min-width: 15em;
+    min-width: 30em;
 }
 
 button{
@@ -28,3 +28,10 @@ button{
     width: 5em;
     background-color: whitesmoke;
 }
+
+.bg_image {
+    background-image: url("/UI/img/background-design-marble-850796.jpg"); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  }
