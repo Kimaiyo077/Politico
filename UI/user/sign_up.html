@@ -3,18 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sign Up| Politico</title>
+    <title>Sign Up | Politico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/UI/css/form.css" />
 </head>
 <body>
-    <header id="content-header">
-        <div>
-            <h1>
-                POLITICO
-            </h1>
-        </div>
-    </header>
     <main>
         <section id="section-b">
             <div class="content-header">
@@ -22,31 +15,37 @@
             </div>
             <form action="" class="grid">
                 <div class="form">
-                    <label for="id-number"> ID Number</label>
-                    <input type="number" name="ID" value="Enter your ID card number">
+                    <input type="number" name="ID" placeholder="ID Card Number">
                 </div>
                 <br>
                 <div class="form">
-                    <label for="first-name"> First Name</label>
-                    <input type="text" name="first-name">
+                    <input type="text" name="first-name" placeholder="First Name">
                 </div>
                 <br>
                 <div class="form">
-                    <label for="last-name"> Last Name</label>
-                    <input type="text" name="last-name">
+                    <input type="text" name="last-name" placeholder="Last Name">
                 </div>
                 <br>
                 <div class="form">
-                    <label for="email"> Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" placeholder="Email">
                 </div>
                 <br>
                 <div class="form">
-                    <label for="password"> Password </label>
-                    <input type="password" name="password">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <br>
+                <div>
+                    <input type="password" name="password" placeholder="Verify Password">
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Sign Up</button>
+                </div>
+                <div>
+                    <p>Already registered? <a href="/UI/user/sign_in.html">Sign In</a></p>
+                    <p>Are you a politician? <a href="#">Sign Up here</a></p>
                 </div>
             </form>
-
         </section>
     </main>
     <footer id="footer" class="grid">
