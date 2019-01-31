@@ -43,6 +43,13 @@ a{
     margin: 0;
     padding-top: 2em;
 }
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 @media all and (max-width: 600px) {
   
     .nav-bar {
@@ -55,9 +62,9 @@ a{
   }
 
 @media(min-width: 800px){
-    .conte-body{
+    .content-body{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .section-a ul {
