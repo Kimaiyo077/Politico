@@ -64,17 +64,18 @@ img{
 @media(min-width: 800px){
     .content-body{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     }
 
     .section-a ul {
         grid-column: 1/4;
     }
+    
     .section-a ul {
         display: flex;
         justify-content: space-around;
     }
-    
+
     .section-a li {
         width: 31%;
     }
