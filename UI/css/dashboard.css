@@ -50,6 +50,10 @@ img{
     height: auto;
 }
 
+button{
+    min-width: 15em;
+}
+
 @media all and (max-width: 600px) {
   
     .nav-bar {
@@ -65,6 +69,10 @@ img{
     .content-body{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .content-body button{
+        width: 5em;
     }
 
     .section-a ul {
