@@ -3,35 +3,27 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Express Interest | Politico</title>
+    <title>Edit Party | Politico</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/UI/css/form.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
 </head>
 <body class="bg_image">
     <main>
         <section id="section-b">
             <div class="content-header">
-                <h3>Express Your Interest</h3>
+                <h3>Edit Political Party</h3>
             </div>
             <form action="" class="grid">
                 <div class="form">
-                    <input type="number" name="ID" placeholder="ID Card Number">
+                    <input type="text" name="party-name" placeholder="Enter New Name">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="text" name="first-name" placeholder="First Name">
+                    <input type="email" name="party-email" placeholder="Enter New Contact Email">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="text" name="last-name" placeholder="Last Name">
-                </div>
-                <br>
-                <div class="form">
-                    <input type="party" name="party" placeholder="Affiliate Party">
-                </div>
-                <br>
-                <div class="form">
-                    <input type="office" name="office" placeholder="Office to run for">
+                    <textarea name="manifesto" id="party-manifesto" cols="59" rows="10" placeholder="Enter Party Manifesto"></textarea>
                 </div>
                 <div>
                     <button type="submit">Submit</button>
