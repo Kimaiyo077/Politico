@@ -43,12 +43,19 @@ function signUp(event){
             statusCode = data.status
 
             if (statusCode == 201){
+                token = data.token
+                email = userData.email
+                name = userData.firstname + ' ' + userData.lastname
+                id = userData.id
+                localStorage.setItem('token', token)
+                localStorage.setItem('email', email)
+                localStorage.setItem('name', name)
+                localStorage.setItem('id', id)
                 window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
             }
             if (statusCode == 400){
                 document.getElementById("message").style.backgroundColor = 'red';
                 document.getElementById("message").style.color = 'white';
-                document.getElementById("message").padding = '2em'
                 document.getElementById("message").innerHTML = data.error;
             }
 
