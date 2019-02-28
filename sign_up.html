@@ -13,33 +13,46 @@
             <div class="content-header">
                 <h3>Sign Up Form</h3>
             </div>
-            <form action="" class="grid">
+            <h2 id="message"></h2>
+            <form id="signup" class="grid">
                 <div class="form">
-                    <input type="number" name="ID" placeholder="ID Card Number">
+                    <input type="number" name="id" id="id" placeholder="ID Card Number">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="text" name="first-name" placeholder="First Name">
+                    <input type="text" name="first-name" id="first-name" placeholder="First Name">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="text" name="last-name" placeholder="Last Name">
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="other-name" id="other-name" placeholder="Other Name">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <br>
+                <div class="form">
+                    <input type="number" name="number" id="number" placeholder="Phone Number">
+                </div>
+                <br>
+                <div class="form">
+                    <input type="url" name="passport-url" id="passport-url" placeholder="Passport Url">
+                </div>
+                <br>
+                <div class="form">
+                    <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <br>
                 <div>
-                    <input type="password" name="password" placeholder="Verify Password">
+                    <input type="password" name="password" id="verify-password" placeholder="Verify Password">
                 </div>
                 <br>
                 <div>
-                    <button type="submit"><a href="dashboard.html">Sign Up</a></button>
+                    <input type="submit" value="Sign Up">
                 </div>
                 <div>
                     <p>Already registered? <a href="sign_in.html">Sign In</a></p>
@@ -52,5 +65,6 @@
             <p>Politico &copy; 2019</p>
         </div>
     </footer> 
+    <script src="js/sign_up.js"></script>
 </body>
 </html>
