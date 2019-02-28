@@ -39,5 +39,24 @@ function signUp(event){
             return res.json()
         })
 
-        .then((data) => console.log(data))
+        .then((data) => {
+            statusCode = data.status
+
+            if (statusCode == 201){
+                window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
+            }
+            if (statusCode == 400){
+                document.getElementById("message").style.backgroundColor = 'red';
+                document.getElementById("message").style.color = 'white';
+                document.getElementById("message").padding = '2em'
+                document.getElementById("message").innerHTML = data.error;
+            }
+
+            if (statusCode == 409){
+                document.getElementById("message").style.backgroundColor = 'red';
+                document.getElementById("message").style.color = 'white';
+                document.getElementById("message").innerHTML = data.error;
+            }
+        })
+        .catch((err) => console.log(err))
 }
