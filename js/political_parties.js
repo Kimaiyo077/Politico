@@ -3,7 +3,7 @@ window.addEventListener('load', getAllParties)
 function getAllParties(){
     let token = localStorage.getItem('token')
 
-    fetch('http://127.0.0.1:5000/api/v2/parties', {
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/parties', {
         method: 'GET',
         headers: {
             'Accept': 'application/json, */*',
