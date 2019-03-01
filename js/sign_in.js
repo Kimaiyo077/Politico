@@ -1,6 +1,6 @@
 document.getElementById('signin').addEventListener('submit', signIn)
 
-function signUp(event){
+function signIn(event){
     event.preventDefault();
 
     let email = document.getElementById('email').value;
@@ -32,25 +32,17 @@ function signUp(event){
             if (statusCode == 200){
                 token = data.token
                 email = userData.email
-                name = data.data.firstname + ' ' + data.data.lastname
-                id = data.data.nationalId
+                //name = data.data.firstname + ' ' + data.data.lastname
+                //id = data.data.nationalId
                 localStorage.setItem('token', token)
                 localStorage.setItem('email', email)
-                localStorage.setItem('name', name)
-                localStorage.setItem('id', id)
+                //localStorage.setItem('name', name)
+                //localStorage.setItem('id', id)
                 window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
             }
-            if (statusCode == 400){
-                document.getElementById("message").style.backgroundColor = 'red';
-                document.getElementById("message").style.color = 'white';
-                document.getElementById("message").innerHTML = data.error;
-            }
-
-            if (statusCode == 401){
-                document.getElementById("message").style.backgroundColor = 'red';
-                document.getElementById("message").style.color = 'white';
-                document.getElementById("message").innerHTML = data.error;
+            else{
+                confirm(data.error)
             }
         })
-        .catch((err) => console.log(err))
+        .catch((err) => console.log('Politico says ' + err))
 }
