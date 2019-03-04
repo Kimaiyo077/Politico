@@ -13,20 +13,21 @@
             <div class="content-header">
                 <h3>Add New Political Party</h3>
             </div>
-            <form action="" class="grid">
+            <h2 id="message"></h2>
+            <form action="" class="grid" id="newParty">
                 <div class="form">
-                    <input type="text" name="party-name" placeholder="Party Name">
+                    <input type="text" id="partyName" name="party-name" placeholder="Party Name">
                 </div>
                 <br>
                 <div class="form">
-                    <input type="email" name="party-email" placeholder="Contact Email">
+                    <input type="text" id="hqAddress" name="hq-address" placeholder="Hq Address">
                 </div>
                 <br>
                 <div class="form">
-                    <textarea name="party-members" id="party-members" cols="59" rows="10" placeholder="Enter Party Manifesto"></textarea>
+                    <input type="text" id="logoUrl" name="logo-url" placeholder="Logo Url">
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <input type="submit" id="submit" placeholder="Submit">
                 </div>
             </form>
         </section>
@@ -35,6 +36,7 @@
         <div>
             <p>Politico &copy; 2019</p>
         </div>
-    </footer> 
+    </footer>
+    <script src="js/new_party.js"></script>
 </body>
 </html>

@@ -38,7 +38,12 @@ function signIn(event){
                 localStorage.setItem('email', email)
                 //localStorage.setItem('name', name)
                 //localStorage.setItem('id', id)
-                window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
+
+                if (email == 'admin@admin.com'){
+                    window.setTimeout(() => window.location.replace('admin_dashboard.html'), 1200);
+                }else{
+                    window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
+                }
             }
             else{
                 confirm(data.error)
