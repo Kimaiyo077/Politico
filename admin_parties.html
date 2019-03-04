@@ -21,7 +21,7 @@
     <main>
         <section class="section-a">
             <div>
-                <p id="message"></p>
+                <h3 id="message"></h3>
                 <ul id="content" class="content-body">
 
                 </ul>
@@ -34,6 +34,37 @@
         function setId(id){
             localStorage.setItem('partyId', id)
             window.location.replace('edit_party.html');
+        }
+
+        function deleteParty(id){
+            let token = localStorage.getItem('token');
+            fetch('http://127.0.0.1:5000/api/v2/parties/' + id,{
+                method : 'DELETE',
+                headers : {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type':'application/json',
+                    'Authorization': 'Bearer ' + token 
+                }
+            })
+
+            .then((res) => {
+                return res.json()
+            })
+
+            .then((data) => {
+                if (data.status == 200){
+                    window.setTimeout(() => window.location.replace('admin_parties.html'), 1200);
+                    document.getElementById("message").style.backgroundColor = 'red';
+                    document.getElementById("message").style.color = 'white';
+                    document.getElementById("message").innerHTML = data.data;
+                }else{
+                    document.getElementById("message").style.backgroundColor = 'red';
+                    document.getElementById("message").style.color = 'white';
+                    document.getElementById("message").innerHTML = data.error;
+                }
+            })
+
+            .catch((error) => console.log(error))
         }
     </script>
     <script src="js/admin_parties.js"></script>
