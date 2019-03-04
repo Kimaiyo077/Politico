@@ -13,20 +13,14 @@
             <div class="content-header">
                 <h3>Edit Political Party</h3>
             </div>
-            <form action="" class="grid">
+            <h2 id="message"></h2>
+            <form id="editParty" class="grid">
                 <div class="form">
-                    <input type="text" name="party-name" placeholder="Enter New Name">
+                    <input type="text" name="party-name" id="partyName" placeholder="Enter New Name">
                 </div>
                 <br>
-                <div class="form">
-                    <input type="email" name="party-email" placeholder="Enter New Contact Email">
-                </div>
-                <br>
-                <div class="form">
-                    <textarea name="manifesto" id="party-manifesto" cols="59" rows="10" placeholder="Enter Party Manifesto"></textarea>
-                </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <input type="submit" id="submit" placeholder="Submit">
                 </div>
             </form>
         </section>
@@ -36,5 +30,6 @@
             <p>Politico &copy; 2019</p>
         </div>
     </footer> 
+    <script src="js/edit_party.js"></script>
 </body>
 </html>
