@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Candidates | Politico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/dashboard.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-item"><a href="dashboard.html">Home</a></li>
+                <li class="nav-item"><a href="political_parties.html">Political Parties</a></li>
+                <li class="nav-item"><a href="candidates.html">Candidates</a></li>
+                <li class="nav-item"><a href="offices.html">Vote Here</a></li>
+                <li class="nav-item"><a href="votes.html">Your Votes</a></li>
+                <li class="nav-item"><a href="sign_in.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-a">
+            <div class="content-title">
+                <h3>
+                    Candidates Information
+                </h3>
+            </div>
+            <div>
+                <h3 id="message"></h3>
+                <ul id="content" class="content-body">
+
+                </ul>
+            </div> 
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+    <script src="js/candidate.js"></script>
+    <script>
+        function castVote(id){
+            let token = localStorage.getItem('token');
+            let user = localStorage.getItem('userId');
+
+            let vote = {
+	            "candidate" : id,
+	            "user" : user
+            }
+
+            fetch('http://127.0.0.1:5000/api/v2/votes',{
+                method : 'POST',
+                headers : {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type':'application/json',
+                    'Authorization': 'Bearer ' + token 
+                },
+                body : JSON.stringify(vote)
+            })
+
+            .then((res) => {
+                return res.json()
+            })
+
+            .then((data) => {
+                if (data.status == 201){
+                    window.setTimeout(() => window.location.replace('offices.html'), 1200);
+                    document.getElementById("message").style.backgroundColor = 'red';
+                    document.getElementById("message").style.color = 'white';
+                    document.getElementById("message").innerHTML = data.data;
+                }else{
+                    document.getElementById("message").style.backgroundColor = 'red';
+                    document.getElementById("message").style.color = 'white';
+                    document.getElementById("message").innerHTML = data.error;
+                }
+            })
+
+            .catch((error) => console.log(error))
+        }
+    </script>
+</body>
+</html>
