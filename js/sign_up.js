@@ -44,13 +44,15 @@ function signUp(event){
 
             if (statusCode == 201){
                 token = data.token
+                userId = data.User.userId
                 email = userData.email
                 name = userData.firstname + ' ' + userData.lastname
-                id = userData.id
+                nationalId = userData.nationalId
                 localStorage.setItem('token', token)
                 localStorage.setItem('email', email)
                 localStorage.setItem('name', name)
-                localStorage.setItem('id', id)
+                localStorage.setItem('nationalId', nationalId)
+                localStorage.setItem('userId', userId)
                 window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
             }
             if (statusCode == 400){

@@ -33,11 +33,13 @@ function signIn(event){
                 token = data.token
                 email = userData.email
                 //name = data.data.firstname + ' ' + data.data.lastname
-                //id = data.data.nationalId
+                nationalId = data.User.nationalId
+                userId = data.User.userId
                 localStorage.setItem('token', token)
                 localStorage.setItem('email', email)
                 //localStorage.setItem('name', name)
-                //localStorage.setItem('id', id)
+                localStorage.setItem('nationalIid', nationalId)
+                localStorage.setItem('userId', userId)
 
                 if (email == 'admin@admin.com'){
                     window.setTimeout(() => window.location.replace('admin_dashboard.html'), 1200);
