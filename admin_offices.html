@@ -36,6 +36,11 @@
             window.location.replace('edit_office.html');
         }
 
+        function setCandidate(id){
+            localStorage.setItem('officeIds', id)
+            window.location.replace('add_candidate.html');
+        }
+
         function deleteOffice(id){
             let token = localStorage.getItem('token');
             fetch('http://127.0.0.1:5000/api/v2/offices/' + id,{
