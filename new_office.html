@@ -13,17 +13,18 @@
             <div class="content-header">
                 <h3>New Government Office</h3>
             </div>
-            <form action="" class="grid">
+            <h2 id="message"></h2>
+            <form action="" class="grid" id="newOffice">
                 <div class="form">
-                    <input type="text" name="name" placeholder="Office Name">
+                    <input type="text" id="officeName" name="name" placeholder="Office Name">
                 </div>
                 <br>
                 <div class="form">
-                    <textarea name="description" id="Office descritption" cols="59" rows="10">Enter Office Descritpion</textarea>
+                   <input type="text" id="officeType" name="type" placeholder="Office Type">
                 </div>
                 <br>
                 <div>
-                    <button type="submit">Add Office</button>
+                    <input type="submit" id="submit" placeholder="Submit">
                 </div>
             </form>
         </section>
@@ -32,6 +33,7 @@
         <div>
             <p>Politico &copy; 2019</p>
         </div>
-    </footer> 
+    </footer>
+    <script src="js/new_office.js"></script>
 </body>
 </html>
