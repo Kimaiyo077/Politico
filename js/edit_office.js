@@ -11,7 +11,7 @@ function editOffice(event){
         'name' : name
     }
 
-    fetch('http://127.0.0.1:5000/api/v2/offices/1',{
+    fetch('http://127.0.0.1:5000/api/v2/offices/' + id,{
         method : 'PATCH',
         headers : {
             'Accept': 'application/json, text/plain, */*',
