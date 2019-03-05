@@ -29,7 +29,7 @@ function addCandidate(event){
 
         .then((data) => {
             if (data.status == 201){
-                window.setTimeout(() => window.location.replace('candidates.html'), 1200);
+                window.setTimeout(() => window.location.replace('admin_offices.html'), 1200);
             }else{
                 document.getElementById("message").style.backgroundColor = 'red';
                 document.getElementById("message").style.color = 'white';

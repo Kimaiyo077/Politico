@@ -33,6 +33,7 @@ function getAllOffices(){
                         <h2><span>Type: </span>${type}</h2>
                         <i class="fas fa-vote-yea fa-10x"></i>
                         <button type="button" name="${name}" id="${id}" onclick="setCandidate(this.id)"><i class="fas fa-user-plus"></i></button>
+                        <button type="button" name="${name}" id="${id}" onclick="otherId(this.id)"><i class="fas fa-list-ul"></i></button>
                         <button type="button" name="${id}" id="${id}" onclick="setId(this.id)"><i class="far fa-edit"></i></button>
                         <button type="button" name="${id}" id="${id}" onclick="deleteOffice(this.id)"><i class="fas fa-trash"></i></button>
                     </li>
