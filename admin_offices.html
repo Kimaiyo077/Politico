@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Government Offices | Politico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/dashboard.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-item"><a href="admin_dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a href="admin_parties.html">Political Parties</a></li>
+                <li class="nav-item"><a href="sign_in.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-a">
+            <div>
+                <h3 id="message"></h3>
+                <ul id="content" class="content-body">
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    </footer>
+    <script>
+        function setId(id){
+            localStorage.setItem('officeId', id)
+            window.location.replace('edit_office.html');
+        }
+
+        function deleteOffice(id){
+            let token = localStorage.getItem('token');
+            fetch('http://127.0.0.1:5000/api/v2/offices/' + id,{
+                method : 'DELETE',
+                headers : {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type':'application/json',
+                    'Authorization': 'Bearer ' + token 
+                }
+            })
+
+            .then((res) => {
+                return res.json()
+            })
+
+            .then((data) => {
+                if (data.status == 200){
+                    window.setTimeout(() => window.location.replace('admin_offices.html'), 1200);
+                    document.getElementById("message").style.backgroundColor = 'red';
+                    document.getElementById("message").style.color = 'white';
+                    document.getElementById("message").innerHTML = data.data;
+                }else{
+                    document.getElementById("message").style.backgroundColor = 'red';
+                    document.getElementById("message").style.color = 'white';
+                    document.getElementById("message").innerHTML = data.error;
+                }
+            })
+
+            .catch((error) => console.log(error))
+        }
+    </script>
+    <script src="js/admin_offices.js"></script>
+</body>
+</html>
