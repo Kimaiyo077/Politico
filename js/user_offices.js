@@ -34,6 +34,7 @@ function getAllOffices(){
                         <i class="fas fa-vote-yea fa-10x"></i>
                         <button type="button" name="${name}" id="${id}" onclick="otherId(this.id)"><i class="fas fa-list-ul"></i></button>
                         <button type="button" name="${name}" id="${id}" onclick="vote(this.id)"><i class="fas fa-vote-yea"></i></button>
+                        <button type="button" name="${name}" id="${id}" onclick="polls(this.id)"><i class="fas fa-poll"></i></button>
                     </li>
                 `;
                 document.getElementById('content').innerHTML += output;
