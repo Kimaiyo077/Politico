@@ -4,7 +4,7 @@ function getUserVotes(){
     let token = localStorage.getItem('token')
     let userId = localStorage.getItem('userId')
 
-    fetch('http://127.0.0.1:5000/api/v2/votes/' + userId, {
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/votes/' + userId, {
         method: 'GET',
         headers: {
             'Accept': 'application/json, */*',
