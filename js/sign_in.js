@@ -13,7 +13,7 @@ function signIn(event){
         }
 
 
-    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/auth/login',{
+    fetch('http://127.0.0.1:5000/api/v2/auth/login',{
         method : 'POST',
         headers : {
             'Accept': 'application/json, text/plain, */*',
@@ -30,16 +30,19 @@ function signIn(event){
             statusCode = data.status
 
             if (statusCode == 200){
+                console.log(data)
                 token = data.token
                 email = userData.email
-                //name = data.data.firstname + ' ' + data.data.lastname
+                name = data.User.firstname + ' ' + data.User.lastname
                 nationalId = data.User.nationalId
                 userId = data.User.userId
+                passportUrl = data.User.passportUrl
                 localStorage.setItem('token', token)
                 localStorage.setItem('email', email)
-                //localStorage.setItem('name', name)
-                localStorage.setItem('nationalIid', nationalId)
+                localStorage.setItem('name', name)
+                localStorage.setItem('nationalId', nationalId)
                 localStorage.setItem('userId', userId)
+                localStorage.setItem('passportUrl', passportUrl)
 
                 if (email == 'admin@admin.com'){
                     window.setTimeout(() => window.location.replace('admin_dashboard.html'), 1200);

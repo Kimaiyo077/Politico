@@ -15,24 +15,12 @@
     <header>
         <nav>
             <ul class="nav-bar">
-                <li class="nav-item">
-                    <a href="dashboard.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="political_parties.html">Political Parties</a>
-                </li>
-                <li class="nav-item">
-                    <a href="candidates.html">Candidates</a>
-                </li>
-                <li class="nav-item">
-                    <a href="offices.html">Vote Here</a>
-                </li>
-                <li class="nav-item">
-                    <a href="votes.html">Your Votes</a>
-                </li>
-                <li class="nav-item">
-                    <a href="sign_in.html">Logout</a>
-                </li>
+                <li class="nav-item"><a href="dashboard.html">Home</a></li>
+                <li class="nav-item"><a href="political_parties.html">Parties</a></li>
+                <li class="nav-item"><a href="offices.html">Offices</a></li>
+                <li class="nav-item"><a href="interest.html">Interest</a></li>
+                <li class="nav-item"><a href="votes.html">Your Votes</a></li>
+                <li class="nav-item"><a href="sign_in.html">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -43,32 +31,9 @@
                     Here are the votes you have casted
                 </h3>
             </div>
-            <div class="content-body">
-                <ul>
-                    <li>
-                        <h2><span>Office: </span>Presidential</h2>
-                        <i class="fas fa-vote-yea fa-10x"></i>
-                        <h3>You Voted For.....</h3>
-                        <div>
-                            <h5>Candidate One</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <h2><span>Office: </span>Governor</h2>
-                        <i class="fas fa-vote-yea fa-10x"></i>
-                        <h3> You Voted For.....</h3>
-                        <div>
-                            <h5>Candidate Two</h5>
-                        </div>
-                    </li>
-                    <li>
-                        <h2><span>Office: </span>Senetor</h2>
-                        <i class="fas fa-vote-yea fa-10x"></i>
-                        <h3>You Voted For.....</h3>
-                        <div>
-                            <h5>Candidate Three</h5>
-                        </div>
-                    </li>
+            <div>
+                <h3 id="message"></h3>
+                <ul id="content" class="content-body">     
                 </ul>
             </div>
             </div>
@@ -76,6 +41,7 @@
     </main>
     <footer class="footer">
     </footer>
+    <script src="js/user_votes.js"></script>
 </body>
 
 </html>
