@@ -18,7 +18,7 @@
                     <li class="nav-item"><a href="offices.html">Offices</a></li>
                     <li class="nav-item"><a href="interest.html">Interest</a></li>
                     <li class="nav-item"><a href="votes.html">Your Votes</a></li>
-                    <li class="nav-item"><a href="sign_in.html">Logout</a></li>
+                    <li class="nav-item"><a href="#" onclick="logout()">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -41,6 +41,11 @@
     </footer>
     <script src="js/candidate.js"></script>
     <script>
+        function logout(){
+            localStorage.clear()
+            window.location.replace('sign_in.html')
+        }
+
         function castVote(id){
             let token = localStorage.getItem('token');
             let user = localStorage.getItem('userId');

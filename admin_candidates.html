@@ -16,7 +16,7 @@
                 <li class="nav-item"><a href="admin_dashboard.html">Home</a></li>
                 <li class="nav-item"><a href="admin_parties.html">Political Parties</a></li>
                 <li class="nav-item"><a href="admin_offices.html">Government Offices</a></li>
-                <li class="nav-item"><a href="sign_in.html">Logout</a></li>
+                <li class="nav-item"><a href="#" onclick="logout()">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -38,5 +38,11 @@
     <footer class="footer">
     </footer>
     <script src="js/view_candidates.js"></script>
+    <script>
+        function logout(){
+            localStorage.clear()
+            window.location.replace('sign_in.html')
+        }
+    </script>
 </body>
 </html>
