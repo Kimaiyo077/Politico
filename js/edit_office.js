@@ -27,7 +27,7 @@ function editOffice(event){
 
         .then((data) => {
             if (data.status == 200){
-                window.setTimeout(() => window.location.replace('admin_parties.html'), 1200);
+                window.setTimeout(() => window.location.replace('admin_offices.html'), 1200);
             }else{
                 document.getElementById("message").style.backgroundColor = 'red';
                 document.getElementById("message").style.color = 'white';

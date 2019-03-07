@@ -27,7 +27,7 @@ function getVotes(){
                 document.location.replace('offices.html')
                 document.getElementById("message").style.backgroundColor = 'red';
                 document.getElementById("message").style.color = 'white';
-                document.getElementById("message").innerHTML = "No votes are casted for the office";
+                document.getElementById("message").innerHTML = "No votes are cast for the office";
             }else{
                 votes.forEach(vote => {
                     let candidate = vote.candidate;
