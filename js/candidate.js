@@ -4,7 +4,7 @@ function listCandidates(){
     let token = localStorage.getItem('token')
     let id = localStorage.getItem('otherId')
 
-    fetch('http://127.0.0.1:5000/api/v2/offices/' + id + '/candidates', {
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/offices/' + id + '/candidates', {
         method: 'GET',
         headers: {
             'Accept': 'application/json, */*',

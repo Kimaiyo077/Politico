@@ -3,7 +3,7 @@ window.addEventListener('load', getAllParties)
 function getAllParties(){
     let token = localStorage.getItem('token')
 
-    fetch('http://127.0.0.1:5000/api/v2/parties', {
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/parties', {
         method: 'GET',
         headers: {
             'Accept': 'application/json, */*',
@@ -35,8 +35,8 @@ function getAllParties(){
                         <img src="${logoUrl}" alt="party image">
                         <h4>Hq Address</h4>
                         <h3>${hqAddress}<h3>
-                        <button type="button" name="${id}" id="${id}" onclick="setId(this.id)"><i class="far fa-edit"></i></button>
-                        <button type="button" name="${id}" id="${id}" onclick="deleteParty(this.id)"><i class="fas fa-trash"></i></button>
+                        <button type="button" name="${id}" id="${id}" onclick="setId(this.id)"><i class="far fa-edit"></i> Edit Party</button>
+                        <button type="button" name="${id}" id="${id}" onclick="deleteParty(this.id)"><i class="fas fa-trash"> Delete Party</i></button>
                     </li>
                 `;
                 document.getElementById('content').innerHTML += output;

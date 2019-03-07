@@ -4,10 +4,11 @@ body{
     line-height: 1.5;
     margin: 0;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #ff9718;
 }
 header{
     background-color: #87d7d8;
+    color: white;
     border-bottom: 1px solid black; 
 }
 li{
@@ -19,8 +20,15 @@ a{
     color: black;
 }
 
+a:hover{
+    color: orange;
+    text-decoration-line: underline;
+    font-weight: bold;
+}
+
 .nav-bar{
     display: flex;
+    background-color: #41274a;
     margin: 0;
 }
 .nav-bar > li{
@@ -37,11 +45,15 @@ a{
 
 .content-body{
     display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 .content-body li{
-    margin: 0;
+    padding: 20px;
+    margin: 2em;
     padding-top: 2em;
+    border: 2px solid;
+    box-shadow:3px 3px 8px ;
 }
 
 img{
@@ -50,8 +62,11 @@ img{
     height: auto;
 }
 
-button{
-    min-width: 15em;
+.message{
+    border: 2px solid;
+    border-radius: 20%;
+    padding: 5px;
+    margin: 5px;
 }
 
 @media all and (max-width: 600px) {
@@ -72,7 +87,7 @@ button{
     }
 
     .content-body button{
-        width: 5em;
+        width: -webkit-fill-available
     }
 
     .section-a ul {

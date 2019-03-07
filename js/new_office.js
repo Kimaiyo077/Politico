@@ -12,7 +12,7 @@ function createOffice(event){
         'type' : type
     }
 
-    fetch('http://127.0.0.1:5000/api/v2/offices',{
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/offices',{
         method : 'POST',
         headers : {
             'Accept': 'application/json, text/plain, */*',

@@ -56,7 +56,7 @@ p{
 .bg-image {
     position: absolute;
     background-repeat: no-repeat;
-    background: url("/img/bg_image_1.jpg");
+    background: url("/Politico/img/bg_image_1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
