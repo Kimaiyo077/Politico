@@ -3,7 +3,7 @@ window.addEventListener('load', getAllOffices)
 function getAllOffices(){
     let token = localStorage.getItem('token')
 
-    fetch('http://127.0.0.1:5000/api/v2/offices', {
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/offices', {
         method: 'GET',
         headers: {
             'Accept': 'application/json, */*',
@@ -32,9 +32,9 @@ function getAllOffices(){
                         <h2><span>Office: </span>${name}</h2>
                         <h2><span>Type: </span>${type}</h2>
                         <i class="fas fa-vote-yea fa-10x"></i>
-                        <button type="button" name="${name}" id="${id}" onclick="otherId(this.id)"><i class="fas fa-list-ul"></i></button>
-                        <button type="button" name="${name}" id="${id}" onclick="vote(this.id)"><i class="fas fa-vote-yea"></i></button>
-                        <button type="button" name="${name}" id="${id}" onclick="polls(this.id)"><i class="fas fa-poll"></i></button>
+                        <button type="button" name="${name}" id="${id}" onclick="otherId(this.id)"><i class="fas fa-list-ul"></i> List Candidates</button>
+                        <button type="button" name="${name}" id="${id}" onclick="vote(this.id)"><i class="fas fa-vote-yea"></i> Cast Vote</button>
+                        <button type="button" name="${name}" id="${id}" onclick="polls(this.id)"><i class="fas fa-poll"></i> Office Polls</button>
                     </li>
                 `;
                 document.getElementById('content').innerHTML += output;

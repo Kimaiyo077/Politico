@@ -13,7 +13,7 @@ function addCandidate(event){
         'party_id' : partyId
     }
 
-    fetch('http://127.0.0.1:5000/api/v2/offices/' + id +'/register',{
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/offices/' + id +'/register',{
         method : 'POST',
         headers : {
             'Accept': 'application/json, text/plain, */*',

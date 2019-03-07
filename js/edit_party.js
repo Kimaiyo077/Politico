@@ -11,7 +11,7 @@ function editParty(event){
         'name' : name
     }
 
-    fetch('http://127.0.0.1:5000/api/v2/parties/' + id +'/name',{
+    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/parties/' + id +'/name',{
         method : 'PATCH',
         headers : {
             'Accept': 'application/json, text/plain, */*',
