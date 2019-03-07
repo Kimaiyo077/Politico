@@ -13,8 +13,9 @@
     <header>
         <nav>
             <ul class="nav-bar">
-                <li class="nav-item"><a href="admin_dashboard.html">Dashboard</a></li>
+                <li class="nav-item"><a href="admin_dashboard.html">Home</a></li>
                 <li class="nav-item"><a href="admin_parties.html">Political Parties</a></li>
+                <li class="nav-item"><a href="admin_offices.html">Government Offices</a></li>
                 <li class="nav-item"><a href="sign_in.html">Logout</a></li>
             </ul>
         </nav>
@@ -39,7 +40,7 @@
 
         function deleteParty(id){
             let token = localStorage.getItem('token');
-            fetch('http://127.0.0.1:5000/api/v2/parties/' + id,{
+            fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/parties/' + id,{
                 method : 'DELETE',
                 headers : {
                     'Accept': 'application/json, text/plain, */*',

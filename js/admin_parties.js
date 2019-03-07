@@ -47,11 +47,11 @@ function getAllParties(){
         if (statusCode == 401){
             console.log(data.error)
             confirm(data.error)
+            window.location.replace('sign_in.html')
         }
 
         if (statusCode == 404){
-            document.getElementById("message").style.backgroundColor = 'red';
-            document.getElementById("message").style.color = 'white';
+            document.getElementById("message").style.color = 'red';
             document.getElementById("message").innerHTML = data.error;
         }
 
