@@ -15,8 +15,9 @@
             <ul class="nav-bar">
                 <li class="nav-item"><a href="dashboard.html">Home</a></li>
                 <li class="nav-item"><a href="political_parties.html">Parties</a></li>
-                <li class="nav-item"><a href="offices.html">offices</a></li>
+                <li class="nav-item"><a href="offices.html">Offices</a></li>
                 <li class="nav-item"><a href="interest.html">Interest</a></li>
+                <li class="nav-item"><a href="votes.html">Your Votes</a></li>
                 <li class="nav-item"><a href="sign_in.html">Logout</a></li>
             </ul>
         </nav>
@@ -28,25 +29,43 @@
                     Your Information
                 </h3>
             </div>
-            <div class="content-body">
-                <ul>
-                    <li>
-                        <i class="fas fa-user fa-10x"></i>
-                        <p> <span>Name: </span>Isaac Kimaiyo</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-id-card fa-10x"></i>
-                        <p><span>ID Number:</span> 12344647</p>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope fa-10x"></i>
-                        <p><span>Email: </span> biwot777@gmail.com</p>
-                    </li>
+            <div>
+                <ul class="content-body" id="content">
+                    
                 </ul>
             </div> 
         </section>
     </main>
     <footer class="footer">
     </footer>
+    <script>
+        window.addEventListener('load', dashboard)
+
+        function dashboard(){
+            let name = localStorage.getItem('name')
+            let email = localStorage.getItem('email')
+            let id = localStorage.getItem('nationalId')
+            let url = localStorage.getItem('passportUrl')
+
+            console.log(name)
+
+            let output = `
+                <li>
+                    <img src="${url}" alt="passport">
+                    <p><span>Name: </span>${name}</p>
+                </li>
+                <li>
+                    <i class="fas fa-id-card fa-10x"></i>
+                    <p><span>ID Number:</span>${id}</p>
+                </li>
+                <li>
+                    <i class="fas fa-envelope fa-10x"></i>
+                    <p><span>Email: </span>${email}</p>
+                </li>
+                    `;
+                    document.getElementById('content').innerHTML += output;
+
+        }
+    </script>
 </body>
 </html>

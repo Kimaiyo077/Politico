@@ -1,10 +1,10 @@
-window.addEventListener('load', getVotes)
+window.addEventListener('load', getUserVotes)
 
-function getVotes(){
+function getUserVotes(){
     let token = localStorage.getItem('token')
-    let id = localStorage.getItem('otherId')
+    let userId = localStorage.getItem('userId')
 
-    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/offices/' + id + '/results', {
+    fetch('http://127.0.0.1:5000/api/v2/votes/' + userId, {
         method: 'GET',
         headers: {
             'Accept': 'application/json, */*',
@@ -31,16 +31,17 @@ function getVotes(){
                 votes.forEach(vote => {
                     let candidate = vote.candidate;
                     let office = vote.office;
-                    let result = vote.result;
+                    let createdOn = vote.createdOn;
 
                     let output = `
                         <li>
                             <h2><span>Office: </span>${office}</h2>
                             <i class="fas fa-vote-yea fa-10x"></i>
-                            <h3><span>Candidate: </span>${candidate}</h3>
+                            <h3>You Voted For.....</h3>
                             <div>
-                                <h5><span>Votes: </span>${result}</h5>
+                                <h5>${candidate}</h5>
                             </div>
+                            <h3> On: ${createdOn}</h3>
                         </li>
                     `;
                     document.getElementById('content').innerHTML += output;

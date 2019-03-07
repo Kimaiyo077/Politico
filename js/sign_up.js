@@ -26,7 +26,7 @@ function signUp(event){
         }
 
 
-    fetch('https://isaac-politico-api-heroku.herokuapp.com/api/v2/auth/signup',{
+    fetch('http://127.0.0.1:5000/api/v2/auth/signup',{
         method : 'POST',
         headers : {
             'Accept': 'application/json, text/plain, */*',
@@ -47,12 +47,14 @@ function signUp(event){
                 userId = data.User.userId
                 email = userData.email
                 name = userData.firstname + ' ' + userData.lastname
+                passportUrl = userData.passportUrl
                 nationalId = userData.nationalId
                 localStorage.setItem('token', token)
                 localStorage.setItem('email', email)
                 localStorage.setItem('name', name)
                 localStorage.setItem('nationalId', nationalId)
                 localStorage.setItem('userId', userId)
+                localStorage.setItem('passportUrl', passportUrl)
                 window.setTimeout(() => window.location.replace('dashboard.html'), 1200);
             }
             if (statusCode == 400){
