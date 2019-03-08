@@ -43,7 +43,7 @@ a:hover{
     text-decoration: underline;
 }
 
-.content-body{
+.content-body .grid-body{
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
@@ -85,7 +85,7 @@ img{
   }
 
 @media(min-width: 800px){
-    .content-body{
+    .content-body .grid-body{
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
     }
