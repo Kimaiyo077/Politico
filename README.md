@@ -1,5 +1,7 @@
 # Politico
 
+![](https://img.shields.io/github/languages/count/Kimaiyo077/Politico.svg?style=flat) ![lastcommit](https://img.shields.io/github/last-commit/Kimaiyo077/Politico.svg?style=flat) ![top language](https://img.shields.io/github/languages/top/martinMutuma/Politico.svg?style=flat)
+
 ## Description
 
 Politico is a platform that allows citizens with national identity cards to register as voters and be able to cast their votes in the election. Politicians could also express interest to run for a specific government office.
